@@ -9,24 +9,15 @@
             </div>
             <div class="card-content">
               <div class="level m-b-md">
-                <div class="media-left">
-                  <div class="level-item has-text-centered">
-                    <div>
-                      <p class="title">JAN</p>
-                      <p class="title">16</p>
-                    </div>
-                  </div>
-                </div>
                 <div class="media-content">
                     <p class="title is-4 no-padding is-marginless">Beer and Burger in Hamburg</p>
                     <!-- <p><span class="title is-6"><a href="http://twitter.com/#">@twitterid</a></span></p> -->
-                    <span class="tag is-success">Music</span>
+                    <span class="tag is-success">Aktif</span>
                     <p class="subtitle is-7">Tomorrow · Times Square · 05201 </p>
                 </div>
               </div>
               <div class="content">
-                  The Beast stumbled in the dark for it could no longer see the path...
-                  <div class="background-icon"><span class="icon-twitter"></span></div>
+                  Jalan blabla
               </div>
             </div>
           </div>
