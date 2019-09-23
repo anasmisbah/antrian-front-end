@@ -9,48 +9,37 @@
             <form>
               <div class="field">
                 <div class="control">
-                    <!-- TODO paste here
-                    
-                        v-model="form.email"
+                  <input v-model="form.email"
                         @blur="$v.form.email.$touch()"
-                     -->
-                  <input 
                         class="input is-large"
                          type="email"
                          placeholder="Your Email"
                          autofocus=""
                          autocomplete="email">
-                         <!-- <div v-if="$v.form.email.$error" class="form-error">
+                         <div v-if="$v.form.email.$error" class="form-error">
                            <span v-if="!$v.form.email.required" class="help is-danger">Email is required</span>
                            <span v-if="!$v.form.email.email" class="help is-danger">Email is not valid</span>
-                         </div> -->
+                         </div>
                 </div>
               </div>
               <div class="field">
                 <div class="control">
-                    <!-- Todo paste here
-                    
-                        v-model="form.password"
+                  <input v-model="form.password"
                         @blur="$v.form.password.$touch()"
-                     -->
-                  <input 
                         class="input is-large"
                          type="password"
                          placeholder="Your Password"
                          autocomplete="current-password">
-                         <!-- <div v-if="$v.form.password.$error" class="form-error">
+                         <div v-if="$v.form.password.$error" class="form-error">
                            <span v-if="!$v.form.password.required" class="help is-danger">Password is required</span>
-                         </div> -->
+                         </div>
                 </div>
               </div>
-              <!-- TODO paste in here
-              @click.prevent="login" 
+              <button @click.prevent="login" 
                       :disabled="isFormInvalid"
                       v-if="isNotClicked"
-               -->
-              <button 
                       class="button is-block is-info is-large is-fullwidth">Login</button>
-              <!-- <AppSpinner v-else/> -->
+              <a v-else class="button is-block is-fullwidth is-info is-loading">Loading</a>
             </form>
           </div>
         </div>
@@ -61,52 +50,47 @@
 
 <script>
 // import {mapActions} from 'vuex'
-// import {required,email} from 'vuelidate/lib/validators'
-// import AppSpinner from '../components/shared/AppSpinner'
+  import {required,email} from 'vuelidate/lib/validators'
   export default {
-    // components:{
-    //   AppSpinner
-    // },
-    //   data() {
-    //       return {
-    //         isNotClicked:true,
-    //           form:{
-    //               email:null,
-    //               password:null
-    //           }
-    //       }
-    //   },
-    //   validations:{
-    //     form:{
-    //       email:{
-    //         required,
-    //         email
-    //       },
-    //       password:{
-    //         required
-    //       }
-    //     }
-    //   },
-    //   computed:{
-    //     isFormInvalid () {
-    //       return this.$v.form.$invalid
-    //     }
-    //   },
-    //   methods: {
-
-    //       ...mapActions('auth',['loginWithEmailAndPassword']),
-    //       login () {
-    //           this.$v.form.$touch()
-    //           this.isNotClicked = false
-    //           this.loginWithEmailAndPassword(this.form)
-    //           .then(()=> this.$router.push('/'))
-    //           .catch(errorMessage => {
-    //             this.$toasted.error(errorMessage,{
-    //               duration:5000
-    //             })
-    //           })
-    //       }
-    //   },
+      data() {
+          return {
+            isNotClicked:true,
+              form:{
+                  email:null,
+                  password:null
+              }
+          }
+      },
+      validations:{
+        form:{
+          email:{
+            required,
+            email
+          },
+          password:{
+            required
+          }
+        }
+      },
+      computed:{
+        isFormInvalid () {
+          return this.$v.form.$invalid
+        }
+      },
+      methods: {
+          // ...mapActions('auth',['loginWithEmailAndPassword']),
+          login () {
+              this.$v.form.$touch()
+              this.isNotClicked = false
+              // this.loginWithEmailAndPassword(this.form)
+              // .then(()=> this.$router.push('/'))
+              // .catch(errorMessage => {
+              //   this.$toasted.error(errorMessage,{
+              //     duration:5000
+              //   })
+              // })
+          }
+      },
   }
 </script>
 

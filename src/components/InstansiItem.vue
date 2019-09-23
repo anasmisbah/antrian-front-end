@@ -11,7 +11,6 @@
               <div class="level m-b-md">
                 <div class="media-content">
                     <p class="title is-4 no-padding is-marginless">Beer and Burger in Hamburg</p>
-                    <!-- <p><span class="title is-6"><a href="http://twitter.com/#">@twitterid</a></span></p> -->
                     <span class="tag is-success">Aktif</span>
                     <p class="subtitle is-7">Tomorrow · Times Square · 05201 </p>
                 </div>
