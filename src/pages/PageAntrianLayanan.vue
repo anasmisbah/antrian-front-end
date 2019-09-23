@@ -18,6 +18,7 @@
                         <div class="content">
                           <p class="title is-1">120</p>
                           <p class="subtitle is-5">sisa antrian 20</p>
+                          <p class="subtitle is-5">Loket tersedia 3</p>
                         </div>
                       </div>
                     </article>
