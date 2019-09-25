@@ -1,22 +1,23 @@
 <template>
-  <div class="column is-one-third">
+  <div class="column is-full">
       <router-link :to="{name: 'PageDetailInstansi',params:{id:instansi.id}}">
           <div class="card is-hoverable large">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                  <img src="https://images.unsplash.com/photo-1475778057357-d35f37fa89dd?dpr=1&auto=compress,format&fit=crop&w=1920&h=&q=80&cs=tinysrgb&crop=" alt="Image">
-              </figure>
-            </div>
             <div class="card-content">
-              <div class="level m-b-md">
-                <div class="media-content">
-                    <p class="title is-4 no-padding is-marginless">{{ instansi.nama }}</p>
-                    <span class="tag is-success">Aktif</span>
-                    <p class="subtitle is-7">Tomorrow · Times Square · 05201 </p>
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-96x96">
+                    <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                  </figure>
                 </div>
-              </div>
-              <div class="content">
-                  {{ instansi.alamat }}
+                <div class="media-content ">
+                  <p class="title is-4">{{ instansi.nama }}</p>
+                  <p class="subtitle is-6">@johnsmith</p>
+                </div>
+                <div class="media-right is-vertical-center">
+                  <p class="control">
+                   <a class="button is-primary is-medium">Pilih</a> 
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -47,5 +48,10 @@ export default {
       -moz-box-shadow: 2px 4px 15px -2px rgba(189,189,189,1);
       box-shadow: 2px 4px 15px -2px rgba(189,189,189,1);
     }
+  }
+  .is-vertical-center {
+    margin: auto;
+    display: flex;
+    align-items: center;
   }
 </style>

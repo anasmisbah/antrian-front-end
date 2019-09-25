@@ -1,16 +1,33 @@
 <template>
   <div>
+    <div class="container">
+      <div class="section">
+      <div class="columns  is-centered cover is-mobile">
+        <div class="column  is-three-quarters">
+          <div class="box box-dark-mode">
+            <div class="field has-addons">
+              <p class="control is-expanded">
+                <input class="input is-medium" type="text" placeholder="Cari Instansi">
+              </p>
+              <p class="control">
+                <button class="button is-medium">
+                  Cari
+                </button>
+              </p>
+            </div>
+          </div>
+        </div> 
+      </div>
+      </div>
+    </div>
     <div v-if="pageLoader_isDataLoaded" class="container">
-      <div  class="container">
         <section class="section">
           <div>
-            <h1 class="title">Instansi</h1>
             <div class="columns cover is-multiline is-mobile">
               <InstansiItem v-for="instansi in allInstansi" :key="instansi.id" :instansi="instansi"/>
             </div>
           </div>
         </section>
-      </div>
     </div>
     <div v-else class="container">
       <AppSpinner />
@@ -51,5 +68,9 @@
 <style scoped>
   .is-rounded {
     border-radius: 10px !important;
+  }
+  .box-dark-mode{
+    background-color: #1A2238;
+    padding: 30px 40px;
   }
 </style>
