@@ -1,6 +1,6 @@
 <template>
   <div class="column is-one-third">
-      <router-link :to="{name: 'PageDetailInstansi',params:{id:'1'}}">
+      <router-link :to="{name: 'PageDetailInstansi',params:{id:instansi.id}}">
           <div class="card is-hoverable large">
             <div class="card-image">
               <figure class="image is-4by3">
@@ -10,13 +10,13 @@
             <div class="card-content">
               <div class="level m-b-md">
                 <div class="media-content">
-                    <p class="title is-4 no-padding is-marginless">Beer and Burger in Hamburg</p>
+                    <p class="title is-4 no-padding is-marginless">{{ instansi.nama }}</p>
                     <span class="tag is-success">Aktif</span>
                     <p class="subtitle is-7">Tomorrow · Times Square · 05201 </p>
                 </div>
               </div>
               <div class="content">
-                  Jalan blabla
+                  {{ instansi.alamat }}
               </div>
             </div>
           </div>
@@ -26,7 +26,12 @@
 
 <script>
 export default {
-
+  props:{
+    instansi:{
+      required:true,
+      type:Object
+    }
+  }
 }
 </script>
 

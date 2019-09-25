@@ -12,7 +12,7 @@ export default {
     actions:{
         fetchAllLayanan(context,instansiId){
 
-        }
+        },
         
     },
     mutations:{

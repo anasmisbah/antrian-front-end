@@ -16,6 +16,11 @@ export default new Vuex.Store({
     },
 
     mutations:{
-        
+        setItems (state,{resource,items}){
+            state[resource].items = items
+        },
+        setItem(state,{resource,item}){
+            state[resource].item = item
+        },
     }
 })

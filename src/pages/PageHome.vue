@@ -1,26 +1,28 @@
 <template>
   <div>
-    <!-- <div v-if="pageLoader_isDataLoaded" class="container"> -->
+    <div v-if="pageLoader_isDataLoaded" class="container">
       <div  class="container">
-      <section class="section">
-        <div>
-          <h1 class="title">Instansi</h1>
-          <div class="columns cover is-multiline is-mobile">
-            <InstansiItem/>
+        <section class="section">
+          <div>
+            <h1 class="title">Instansi</h1>
+            <div class="columns cover is-multiline is-mobile">
+              <InstansiItem v-for="instansi in allInstansi" :key="instansi.id" :instansi="instansi"/>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
-    <!-- <div v-else class="container">
+    <div v-else class="container">
       <AppSpinner />
-    </div> -->
-  </div>
+    </div>
+ </div>
 </template>
 
 <script>
   import PageLoader from '@/mixins/PageLoader'
   import AppSpinner from '../components/shared/AppSpinner'
   import InstansiItem from '../components/InstansiItem'
+  import { mapActions,mapState } from "vuex";
   export default {
     components:{
       InstansiItem,
@@ -28,14 +30,20 @@
     },
      mixins:[PageLoader],
     computed: {
-      
+      ...mapState({
+        allInstansi: state => state.instansi.items
+      })
     },
      created() {
-       
-       
+       Promise.all([this.fetchAllInstansi()])
+       .then(() => {
+         this.pageLoader_resolveData()})
+       .catch(()=>{
+         this.pageLoader_resolveData()
+       })
      },
      methods: {
-
+       ...mapActions('instansi',['fetchAllInstansi'])
      },
   }
 </script>

@@ -12,7 +12,7 @@
             <div class="media-content">
               <div class="content">
                 <h1 class="title">
-                  Instansi Anu
+                  Nama Instansi
                 </h1>
               </div>
             </div>

@@ -15,7 +15,7 @@ export default {
 
 <style scopped>
 .sk-folding-cube {
-  margin: 20px auto;
+  margin: 200px auto 25px;
   width: 40px;
   height: 40px;
   position: relative;
