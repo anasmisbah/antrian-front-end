@@ -21,15 +21,13 @@
       </div>
     </div>
     <div v-if="pageLoader_isDataLoaded" class="container">
-        <section class="section">
-          <div>
-            <div class="columns cover is-multiline is-mobile">
-              <InstansiItem v-for="instansi in allInstansi" :key="instansi.id" :instansi="instansi"/>
-            </div>
-          </div>
-        </section>
+      <div>
+        <div class="columns cover is-multiline is-mobile">
+          <InstansiItem v-for="instansi in allInstansi" :key="instansi.id" :instansi="instansi"/>
+        </div>
+      </div>
     </div>
-    <div v-else class="container">
+    <div v-else>
       <AppSpinner />
     </div>
  </div>

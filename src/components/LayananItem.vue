@@ -1,13 +1,22 @@
 <template>
-    <div class="column is-hoverable is-half" :style="{'min-height': '160px'}">
-        <router-link :to="{name: 'PageAntrianLayanan',params:{id:'1'}}">
-        <span class="is-primary is-top is-medium tooltip">
-            <figure class="image is-5by3  imageFade">
-            <img class="is-rounded" src="https://images.unsplash.com/photo-1508355991726-ebd81e4802f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1506&q=80" alt="">
+    <div  class="column is-one-third">
+      <div class="card is-hoverable large">
+        <router-link :to="{name: 'PageAntrianLayanan',params:'1'}" class="card-meetup-link">
+          <div class="card-image">
+            <figure class="image is-4by3">
+                <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="Image">
             </figure>
-            <div class="subtitle m-t-xs bold">Sport</div>
-        </span>
+          </div>
+          <div class="card-content">
+            <div class="level m-b-md">
+              <div class="media-content">
+                  <p class="title is-4 no-padding">Nama Layanan</p>
+                  <p class="subtitle is-5">asdasd</p>
+              </div>
+            </div>
+          </div>
         </router-link>
+      </div>
     </div>
 </template>
 

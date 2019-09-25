@@ -20,42 +20,33 @@
         </div>
       </div>
     </section>
-    <section class="section">
-      <div class="container">
-        <div class="columns">
-          <div class="column is-3">
-            <aside class="is-medium menu">
-              <div class="meetup-side-box">
-                <div class="meetup-side-box-date m-b-sm">
-                  <p><b>Nama</b></p>
-                  <p>no</p>
-                </div>
-                <div class="meetup-side-box-date m-b-sm">
-                  <p><b>Alamat</b></p>
-                  <span>no</span> - <span>no</span>
-                </div>
-              </div>
-              <div class="meetup-side-box-map">
-                <img src="https://cnet2.cbsistatic.com/img/H_zPLL8-QTZOLxJvgHQ1Jkz0EgY=/830x467/2013/07/10/f0bcef02-67c2-11e3-a665-14feb5ca9861/maps_routemap.png" class="venueMap-mapImg span--100" alt="Location image of meetup venue">
-              </div>
-              <!-- Threads Start -->
-            </aside>
+    <div class="container">
+      <div class="section">
+      <div class="columns  is-centered cover is-mobile">
+        <div class="column  is-three-quarters">
+          <div class="box box-dark-mode">
+            <div class="field has-addons">
+              <p class="control is-expanded">
+                <input class="input is-medium" type="text" placeholder="Cari Layanan Pada instansi">
+              </p>
+              <p class="control">
+                <button class="button is-medium">
+                  Cari
+                </button>
+              </p>
+            </div>
           </div>
-          <div class="column is-8 ">
-            <!-- <div v-if="pageLoader_isDataLoaded" class="container"> -->
-                <div>
-                  <h1 class="title">Layanan Pada instansi</h1>
-                  <div class="columns cover is-multiline is-mobile">
-                    <LayananItem/>
-                  </div>
-                </div>
-            <!-- <div v-else class="container">
-              <AppSpinner />
-            </div> -->
-          </div>
-        </div>
+        </div> 
       </div>
-    </section>
+      </div>
+      <div class="columns cover is-multiline is-mobile">
+          <!-- <div v-if="pageLoader_isDataLoaded" class="container"> -->  
+          <LayananItem/>
+          <!-- <div v-else class="container">
+            <AppSpinner />
+          </div> -->
+      </div>
+    </div>
   </div>
 </template>
 
@@ -140,5 +131,9 @@
   .media + .media {
     border: none;
     margin-top: 0;
+  }
+  .box-dark-mode{
+    background-color: #1A2238;
+    padding: 30px 40px;
   }
 </style>
